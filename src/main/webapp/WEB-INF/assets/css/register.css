@@ -1,0 +1,79 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(6, 6, 6, 0.2);
+    display: flex;
+    justify-content: center;
+    z-index: 100;
+    align-items: center;
+}
+
+.content {
+    background-color: #ffffff;
+    z-index: 101;
+    border-radius: 2px;
+}
+
+
+.register {
+    width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.register form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.register form .form-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin-right: 60px;
+}
+
+form .form-row label {
+    width: 140px;
+    font-size: 14px;
+    text-align: end;
+    padding-right: 8px;
+}
+form .form-row input {
+    height: 28px;
+    width: 220px;
+    border-radius: 4px;
+    outline: none;
+    border: 1px solid #BBBBBB;
+    padding: 5px;
+}
+form .form-row input:focus {
+
+    border: 1px solid #2764C7;
+}
+
+form .btn-submit {
+    margin-top: 20px;
+}
+
+.form-bottom {
+    margin-top: 20px;
+    width: 100%;
+    padding-right: 10px;
+}
+
+.form-bottom a {
+    float: right;
+}
+.form-bottom a:hover {
+    color: #2764C7;
+}

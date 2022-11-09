@@ -1,0 +1,27 @@
+.main .row {
+    padding: 20px;
+    width: 100%;
+}
+
+.row>div {
+    width: 50%;
+}
+
+.row .info-item {
+    padding: 10px;
+}
+
+.date-picker {
+    display: flex;
+    flex-direction: column;
+}
+.date-picker input{
+    width: 200px;
+    height: 30px;
+    margin-top: 5px;
+}
+
+.main .bottom {
+    display: flex;
+    justify-content: space-between;
+}

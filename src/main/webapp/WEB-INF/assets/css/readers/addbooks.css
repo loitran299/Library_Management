@@ -1,0 +1,31 @@
+.main .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .command:nth-child(1) {
+    margin-top: 20px;
+}
+
+.input-search {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    outline: none;
+    background-image: url(/img/search.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.input-search:focus {
+    border: 1px solid #538bc3;
+}
+
+.bg-red {
+    background-color: #f66664;
+}
+.bg-red:hover {
+    background-color: #e7908e;
+}
