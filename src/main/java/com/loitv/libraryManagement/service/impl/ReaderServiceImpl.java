@@ -15,6 +15,8 @@ public class ReaderServiceImpl implements ReaderService{
     @Override
     public Reader add(Reader entity) {
         entity = readerRepository.save(entity);
+        entity.setCode("DG"+entity.getId());
+        entity = readerRepository.save(entity);
         return entity;
     }
 

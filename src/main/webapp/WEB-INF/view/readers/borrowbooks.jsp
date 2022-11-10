@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/readers/borrowbooks.css">
     <title>Mượn sách</title>
 </head>
@@ -20,7 +21,7 @@
     <div class="main flex">
         <div class="command">
             <span>Các phiếu mượn đã đăng ký</span>
-            <a href="add-borrow" class="btn-page">Thêm phiếu mượn</a>
+            <a href="add-borrow" class="btn-page" id="btn-add-borrow">Thêm phiếu mượn</a>
         </div>
         <table class="grid">
             <thead>
@@ -33,7 +34,7 @@
                 <th></th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="tbd">
             <tr>
                 <td></td>
                 <td></td>
@@ -52,4 +53,5 @@
     </div>
 </div>
 </body>
+<script src="/js/borrowbooks.js"></script>
 </html>

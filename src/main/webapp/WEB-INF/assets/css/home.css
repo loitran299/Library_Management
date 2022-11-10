@@ -22,7 +22,7 @@
 
 .logo {
     height: 50px;
-    background-image: url("./../../img/book.png");
+    background-image: url(/img/book.png);
     background-size: contain;
     background-repeat: no-repeat;
     line-height: 55px;
