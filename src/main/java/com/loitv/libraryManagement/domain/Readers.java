@@ -1,6 +1,8 @@
 package com.loitv.libraryManagement.domain;
 
+import com.loitv.libraryManagement.model.CallCard;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpSession;
@@ -12,8 +14,9 @@ public class Readers {
         return "readers/home";
     }
     @GetMapping("borrow-books")
-    public String borrowBooks(HttpSession session) {
-        System.out.println(session.getAttribute("user"));
+    public String borrowBooks(Model model) {
+        CallCard callCard = new CallCard();
+        model.addAttribute("callCard", callCard);
         return "readers/borrowbooks";
     }
 

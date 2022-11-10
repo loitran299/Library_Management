@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/readers//borrowbooks.css">
     <link rel="stylesheet" href="/css/readers//addbooks.css">
     <title>Mượn sách</title>
@@ -34,19 +35,7 @@
                 <th></th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a href="">Chi tiết</a>
-                </td>
-                <td>
-                    <button class="btn-page">Thêm</button>
-                </td>
-            </tr>
+            <tbody id="tbody1">
             </tbody>
         </table>
 
@@ -64,7 +53,7 @@
                     <th></th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody2">
                 <tr>
                     <td></td>
                     <td></td>
@@ -84,4 +73,5 @@
     </div>
     </div>
 </body>
+<script src="/js/addbooks.js"></script>
 </html>

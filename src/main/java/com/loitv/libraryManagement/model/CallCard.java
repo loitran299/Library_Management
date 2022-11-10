@@ -1,5 +1,6 @@
 package com.loitv.libraryManagement.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -36,6 +37,7 @@ public class CallCard {
     @JoinColumn(name = "librarian_id")
     private Librarian librarian;
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(name = "PhieuMuon_Sach",
             joinColumns = @JoinColumn(name = "phieuMuon_id"),

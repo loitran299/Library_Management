@@ -1,5 +1,8 @@
 package com.loitv.libraryManagement.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,7 +20,7 @@ import java.util.Set;
 @Entity
 public class Book {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id", nullable = false)
     private Long id;
 
@@ -29,10 +32,13 @@ public class Book {
 
     private String notes;
 
+    @JsonIgnore
+    @Transient
     @ManyToMany(mappedBy = "books")
     private Set<CallCard> callCards;
 
     @ManyToOne
     @JoinColumn(name = "title_id")
+    @JsonManagedReference
     private Title title;
 }

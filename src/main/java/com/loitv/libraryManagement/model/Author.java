@@ -1,5 +1,6 @@
 package com.loitv.libraryManagement.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,8 @@ public class Author {
 
     private String story;
 
+
     @OneToMany(mappedBy = "author")
+    @JsonBackReference
     private Set<Title> titles;
 }

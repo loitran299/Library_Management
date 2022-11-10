@@ -1,5 +1,6 @@
 package com.loitv.libraryManagement.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,5 +25,6 @@ public class Category {
     private String notes;
 
     @OneToMany(mappedBy = "category")
+    @JsonBackReference
     private Set<Title> titles;
 }

@@ -6,7 +6,6 @@ import com.loitv.libraryManagement.model.Reader;
 import com.loitv.libraryManagement.repository.CallCardRepository;
 import com.loitv.libraryManagement.repository.ReaderRepository;
 import com.loitv.libraryManagement.service.CallCardService;
-import com.loitv.libraryManagement.service.ReaderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -46,7 +45,7 @@ public class CallCardServiceImpl implements CallCardService {
 
     @Override
     public boolean addBooks(long id, Set<Book> books) {
-        CallCard callCard = callCardRepository.getReferenceById(id);
+        CallCard callCard = callCardRepository.getById(id);
         Set<Book> oldBooks = callCard.getBooks();
         oldBooks.addAll(books);
         callCard.setBooks(oldBooks);

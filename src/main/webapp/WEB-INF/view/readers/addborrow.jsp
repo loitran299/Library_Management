@@ -65,4 +65,5 @@
     </div>
 </div>
 </body>
+<script src="/js/addborrow.js"></script>
 </html>
