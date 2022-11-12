@@ -9,6 +9,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/readers//borrowbooks.css">
     <link rel="stylesheet" href="/css/readers//addborrow.css">
     <title>Mượn sách</title>
@@ -21,8 +22,8 @@
     <div class="main flex">
         <div class="row flex">
             <div>
-                <div class="info-item">Mã độc giả: <span>...</span></div>
-                <div class="info-item">Họ tên: <span>...</span></div>
+                <div class="info-item">Mã độc giả: <span>${user.code}</span></div>
+                <div class="info-item">Họ tên: <span>${user.fullName}</span></div>
             </div>
             <div class="date-picker">
                 <label for="payDate">Ngày trả</label>
@@ -45,22 +46,12 @@
                 <th></th>
             </tr>
             </thead>
-            <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a href="">Chi tiết</a>
-                </td>
-            </tr>
+            <tbody id="tbody3">
             </tbody>
         </table>
         <div class="bottom">
-            <a href="borrow-books" class="btn-page">Quay lại</a>
-            <a href="" class="btn-page">Đăng ký</a>
+            <a href="borrow-books" class="btn-page" id="backToBorrowBook">Quay lại</a>
+            <a class="btn-page" id="btnAddBorrow">Đăng ký</a>
         </div>
     </div>
 </div>

@@ -35,16 +35,6 @@
             </tr>
             </thead>
             <tbody id="tbd">
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>
-                    <a href="">Chi tiết</a>
-                </td>
-            </tr>
             </tbody>
         </table>
         <div class="bottom">

@@ -8,4 +8,5 @@ public interface BookService extends BaseService<Book>{
     List<Book> getByCallCard(long callCardId);
     List<Book> search(String information);
     List<Book> getAll();
+    Book getById(Long id);
 }

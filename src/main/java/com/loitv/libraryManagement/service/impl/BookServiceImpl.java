@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 @Service
 public class BookServiceImpl implements BookService {
@@ -46,9 +47,11 @@ public class BookServiceImpl implements BookService {
     public List<Book> search(String information) {
         List<Book> result = new ArrayList<Book>();
         List<Book> books = bookRepository.findAll();
+        information = information.toLowerCase(Locale.ROOT);
         for (Book book : books) {
             Title title = book.getTitle();
             String match = book.getCode() + book.getStatus() + book.getId() + title.getName() + title.getAuthor().getName() + title.getCategory().getName();
+            match = match.toLowerCase(Locale.ROOT);
             if (match.contains(information)) {
                 result.add(book);
             }
@@ -59,6 +62,11 @@ public class BookServiceImpl implements BookService {
     @Override
     public List<Book> getAll() {
         return bookRepository.findAll();
+    }
+
+    @Override
+    public Book getById(Long id) {
+        return bookRepository.findById(id).get();
     }
 
 }

@@ -33,7 +33,6 @@ public class Book {
     private String notes;
 
     @JsonIgnore
-    @Transient
     @ManyToMany(mappedBy = "books")
     private Set<CallCard> callCards;
 

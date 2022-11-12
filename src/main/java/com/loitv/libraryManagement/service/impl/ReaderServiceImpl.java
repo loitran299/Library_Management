@@ -39,4 +39,9 @@ public class ReaderServiceImpl implements ReaderService{
     public Reader getByUsername(String username) {
         return readerRepository.getReaderByUsername(username);
     }
+
+    @Override
+    public Reader getById(Long id) {
+        return readerRepository.getById(id);
+    }
 }

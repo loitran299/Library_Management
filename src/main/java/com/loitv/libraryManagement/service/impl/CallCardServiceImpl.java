@@ -6,10 +6,12 @@ import com.loitv.libraryManagement.model.Reader;
 import com.loitv.libraryManagement.repository.CallCardRepository;
 import com.loitv.libraryManagement.repository.ReaderRepository;
 import com.loitv.libraryManagement.service.CallCardService;
+import com.loitv.libraryManagement.service.MySession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
@@ -25,6 +27,11 @@ public class CallCardServiceImpl implements CallCardService {
     @Override
     public CallCard add(CallCard entity) {
         entity.setStatus("Chờ lấy");
+        Date utilDate = new Date();
+        java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+        entity.setBorrowedDate(sqlDate);
+        Reader reader = readerRepository.getById(MySession.getUserID());
+        entity.setReader(reader);
         return callCardRepository.save(entity);
     }
 

@@ -22,7 +22,7 @@
     <div class="main flex">
         <div class="command">
             <span>Chọn sách</span>
-            <input type="text" placeholder="search..." class="input-search">
+            <input type="text" placeholder="search..." class="input-search" id="input-search">
         </div>
         <table class="grid">
             <thead>
@@ -54,19 +54,10 @@
                 </tr>
                 </thead>
                 <tbody id="tbody2">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <a href="" class="btn-page bg-red">Xóa</a>
-                    </td>
-                </tr>
                 </tbody>
             </table>
             <div class="bottom">
-                <a href="add-borrow" class="btn-page">Quay lại</a>
+                <a href="add-borrow" class="btn-page" id="backToBorrow">Quay lại</a>
                 <a href="" class="btn-page">Lưu</a>
             </div>
         </div>
