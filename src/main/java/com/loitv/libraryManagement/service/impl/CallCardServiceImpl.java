@@ -10,10 +10,7 @@ import com.loitv.libraryManagement.service.MySession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class CallCardServiceImpl implements CallCardService {
@@ -69,8 +66,10 @@ public class CallCardServiceImpl implements CallCardService {
     public List<CallCard> getByWaitingStatus(String information) {
         List<Reader> readers = readerRepository.findAll();
         Reader reader = new Reader();
+        information = information.toLowerCase(Locale.ROOT);
         for (Reader person : readers) {
             String match = person.getCode() + person.getFullName() + person.getUsername();
+            match = match.toLowerCase(Locale.ROOT);
             if (match.contains(information)) {
                 reader = person;
                 break;
@@ -91,5 +90,10 @@ public class CallCardServiceImpl implements CallCardService {
     @Override
     public List<CallCard> getByReaderId(long id) {
         return callCardRepository.findByReader_Id(id);
+    }
+
+    @Override
+    public CallCard getById(Long id) {
+        return callCardRepository.findById(id).get();
     }
 }

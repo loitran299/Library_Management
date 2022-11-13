@@ -12,6 +12,7 @@
 }
 
 .btn-blue {
+    text-decoration: none;
     outline: none;
     border-radius: 5px;
     padding: 5px;
@@ -29,4 +30,9 @@
 .btn-blue:focus {
     background-color: #709ade;
     outline: 2px solid black;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
 }

@@ -59,7 +59,7 @@ function renderBooks() {
         tr.append(`<td>${item.title.name}</td>`);
         tr.append(`<td>${item.status}</td>`);
         tr.append(`<td>${item.title.category.name}</td>`);
-        tr.append(`<td><a href="">Chi tiết</a></td>`);
+        tr.append(`<td><a href="http://localhost:8080/book-detail?id=${item.id}">Chi tiết</a></td>`);
         let btn = $(`<button class="btn-page">Thêm</button>`)
         btn.click(() => {
             onClickAddBook(item);

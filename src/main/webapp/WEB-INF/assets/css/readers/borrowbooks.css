@@ -99,3 +99,15 @@
     height: 50px;
     padding: 20px;
 }
+
+.input-search {
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    outline: none;
+    background-image: url(/img/search.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}

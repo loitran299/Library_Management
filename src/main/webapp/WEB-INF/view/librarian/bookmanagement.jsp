@@ -10,19 +10,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/librarian/bookmanagement.css">
+
     <title>Trang chủ thủ thư</title>
 </head>
 <body>
 <div class="container">
     <div class="header">
-        <div class="logo">TRANG CHỦ THỦ THƯ</div>
-        <div class="user">
-            <div class="username">${user.fullName}</div>
-            <a href="/login" class="btn-logout">Đăng xuất</a>
-        </div>
+        <div class="logo">QUẢN LÝ MƯỢN SÁCH</div>
     </div>
     <div class="main">
-        <a href="/book-management" class="btn-page">Quản lý mượn sách</a>
+        <a href="/receive-book" class="btn-page">Độc giả nhận sách</a>
+        <a href="/borrow-book" class="btn-page">Thêm phiếu mượn</a>
+    </div>
+    <div class="bottom">
+        <a href="/home-librarian" class="btn-blue">Về trang chủ</a>
     </div>
 </div>
 </body>

@@ -22,8 +22,8 @@
     <div class="main flex">
         <div class="row flex">
             <div>
-                <div class="info-item">Mã độc giả: <span>${user.code}</span></div>
-                <div class="info-item">Họ tên: <span>${user.fullName}</span></div>
+                <div class="info-item">Mã độc giả: <span></span></div>
+                <div class="info-item">Họ tên: <span></span></div>
             </div>
             <div class="date-picker">
                 <label for="payDate">Ngày trả</label>
@@ -56,29 +56,29 @@
             <tbody id="tbody3">
             <c:if test="${detail != null}">
                 <c:forEach items="${detail.books}" var="book">
-                <tr>
-                    <td>${book.code}</td>
-                    <td>${book.title.name}</td>
-                    <td>${book.status}</td>
-                    <td>${book.title.category.name}</td>
-                    <td>${book.title.author.name}</td>
-                    <td>
-                        <a href="/book-detail?id=${book.id}">Chi tiết</a>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>${book.code}</td>
+                        <td>${book.title.name}</td>
+                        <td>${book.status}</td>
+                        <td>${book.title.category.name}</td>
+                        <td>${book.title.author.name}</td>
+                        <td>
+                            <a href="/book-detail?id=${book.id}">Chi tiết</a>
+                        </td>
+                    </tr>
                 </c:forEach>
             </c:if>
             </tbody>
         </table>
         <div class="bottom">
-            <a href="borrow-books" class="btn-page" id="backToBorrowBook">Quay lại</a>
+            <a href="/book-management" class="btn-page" id="backToBorrowBook">Quay lại</a>
             <c:if test="${detail == null}">
                 <a class="btn-page" id="btnAddBorrow">Đăng ký</a>
             </c:if>
-<%--            <a class="btn-page" id="btnAddBorrow">Đăng ký</a>--%>
+            <%--            <a class="btn-page" id="btnAddBorrow">Đăng ký</a>--%>
         </div>
     </div>
 </div>
 </body>
-<script src="/js/addborrow.js"></script>
+<script src=""></script>
 </html>

@@ -1,0 +1,13 @@
+.book-detail {
+    background-color: rgb(218, 230, 226);
+    width: 500px;
+    padding: 20px;
+    height: 60%;
+    border-radius: 5px;
+    box-shadow: 1px 5px 20px #000000;
+    margin-top: 100px;
+}
+
+.book-detail>* {
+    margin: 20px;
+}

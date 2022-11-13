@@ -39,9 +39,9 @@ public class CallCardsController {
                 Book book = bookService.getById(id);
                 set.add(book);
             }
+            callCard.setReturnedDate(ids.getReturnedDate());
             callCard.setBooks(set);
             callCard = callCardService.add(callCard);
-            response.setData(callCard);
             response.setStatus(200);
             response.setMessage("Thêm phiếu mượn thành công");
         }catch (Exception e) {
@@ -50,5 +50,10 @@ public class CallCardsController {
             e.printStackTrace();
         }
         return response;
+    }
+
+    @GetMapping("/find")
+    public List<CallCard> findByReader(@RequestParam String information) {
+        return callCardService.getByWaitingStatus(information);
     }
 }

@@ -15,7 +15,7 @@ async function init() {
         tr.append(`<td>${item.borrowedDate}</td>`);
         tr.append(`<td>${item.returnedDate}</td>`);
         tr.append(`<td>${item.status}</td>`);
-        let btn = $(`<a href="">Chi tiết</a>`)
+        let btn = $(`<a href="http://localhost:8080/call-card-detail?id=${item.id}">Chi tiết</a>`)
 
         tr.append($(`<td></td>`).append(btn));
 

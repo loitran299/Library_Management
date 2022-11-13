@@ -11,4 +11,5 @@ public interface CallCardService extends BaseService<CallCard>{
     List<CallCard> getByWaitingStatus(String information);
     boolean confirmCallCard(long id);
     List<CallCard> getByReaderId(long id);
+    CallCard getById(Long id);
 }

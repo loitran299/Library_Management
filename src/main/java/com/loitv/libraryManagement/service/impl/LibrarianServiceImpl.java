@@ -36,4 +36,9 @@ public class LibrarianServiceImpl implements LibrarianService {
     public Librarian getByUsername(String username) {
         return librarianRepository.getLibrarianByUsername(username);
     }
+
+    @Override
+    public Librarian getById(Long id) {
+        return librarianRepository.findById(id).get();
+    }
 }

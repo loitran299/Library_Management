@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.sql.Date;
 import java.util.List;
 
 @Getter
@@ -13,4 +14,5 @@ import java.util.List;
 @NoArgsConstructor
 public class BooksID {
     private List<Long> ids;
+    private Date returnedDate;
 }

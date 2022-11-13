@@ -40,8 +40,10 @@ async function addBorrow() {
     let data = selected.map((item) => {
         return item.id;
     });
+    let returnedDate = $("#payDate").val();
     let body = {
-        'ids' : data
+        'ids' : data,
+        'returnedDate' : returnedDate
     }
     let response = await fetch(url, {
         method: "POST",
@@ -50,6 +52,7 @@ async function addBorrow() {
             "Content-Type": "application/json; charset=UTF-8"
         }
     }).then((responses) => {return responses.json()}).then((results) => {return results});
+    console.log(response)
     if (response.status == 200) {
         alert(response.message);
         window.location.href = "http://localhost:8080/borrow-books";
