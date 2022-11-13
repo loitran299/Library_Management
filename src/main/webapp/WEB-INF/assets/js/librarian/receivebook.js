@@ -45,7 +45,7 @@ function renderGrid(callCard) {
         tr.append(`<td>${item.reader.fullName}</td>`);
         tr.append(`<td>${item.returnedDate}</td>`);
         tr.append(`<td>${item.status}</td>`);
-        let btn = $(`<a href="http://localhost:8080/call-card-detail?id=${item.id}" class="btn-page">Thay đổi</a>`)
+        let btn = $(`<a href="http://localhost:8080/borrow-detail?id=${item.id}" class="btn-page">Thay đổi</a>`)
         tr.append($(`<td></td>`).append(btn));
         let btn2 = $(`<a href="http://localhost:8080/call-card-detail?id=${item.id}" class="btn-page">Xác nhận lấy</a>`)
         tr.append($(`<td></td>`).append(btn2));
