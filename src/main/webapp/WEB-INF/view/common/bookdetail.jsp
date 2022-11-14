@@ -23,6 +23,9 @@
         <h4>Thể loại:<span>${bookDetail.title.category.name}</span></h4>
         <h4>Ghi chú:<span>${bookDetail.notes}</span></h4>
     </div>
+    <div>
+        <button onclick="history.back()" class="btn-blue">Quay lại</button>
+    </div>
 </div>
 </body>
 </html>

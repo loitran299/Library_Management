@@ -5,9 +5,21 @@
     height: 60%;
     border-radius: 5px;
     box-shadow: 1px 5px 20px #000000;
-    margin-top: 100px;
+
 }
 
 .book-detail>* {
     margin: 20px;
+}
+
+.flex {
+    flex-direction: column;
+}
+
+.container {
+    align-items: center;
+}
+
+button {
+    margin-top: 30px;
 }

@@ -35,6 +35,7 @@
                 <label for="payDate">Ngày trả</label>
                 <c:if test="${detail != null}">
                     <input type="date" name="payDate" id="payDate" value="${detail.returnedDate}">
+                    <input type="hidden" name="payDate" id="idCallCard" value="${detail.id}">
                 </c:if>
                 <c:if test="${detail == null}">
                     <input type="date" name="payDate" id="payDate">
@@ -44,9 +45,7 @@
         </div>
         <div class="command">
             <span>Các sách mượn</span>
-            <c:if test="${detail == null}">
                 <a href="add-books" class="btn-page">Thêm sách</a>
-            </c:if>
         </div>
         <table class="grid">
             <thead>
@@ -78,9 +77,7 @@
         </table>
         <div class="bottom">
             <a href="/receive-book" class="btn-page" id="backToReceive">Quay lại</a>
-            <c:if test="${detail == null}">
-                <a class="btn-page" id="btnAddBorrow">Đăng ký</a>
-            </c:if>
+                <a class="btn-page" id="btnAddBorrow">Lưu</a>
         </div>
     </div>
 </div>
