@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.combobox {
+    width: fit-content;
+    position: relative;
+}
+
+.combobox input {
+    height: 30px;
+    width: 250px;
+}
+
+.combobox .list-values {
+    padding: 5px 0;
+    position: absolute;
+    box-shadow: 1px 1px 4px #000000;
+    width: 100%;
+    margin-top: 5px;
+    background-color: #FFFFFF;
+}
+
+.list-values div {
+    cursor: pointer;
+    padding: 10px 5px;
+}
+
+.list-values div:hover {
+    background-color: #BBBBBB;
+}

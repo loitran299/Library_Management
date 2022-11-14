@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/readers//borrowbooks.css">
     <link rel="stylesheet" href="/css/readers//addborrow.css">
+    <link rel="stylesheet" href="/css/combobox.css">
     <title>Mượn sách</title>
 </head>
 <body>
@@ -24,6 +25,14 @@
             <div>
                 <div class="info-item">Mã độc giả: <span></span></div>
                 <div class="info-item">Họ tên: <span></span></div>
+                <div class="combobox" id="combobox">
+                    <input type="text" id="comboboxValue">
+                    <div class="list-values" id="list">
+                        <div class="item">item 1</div>
+                        <div class="item">item 1</div>
+                        <div class="item">item 1</div>
+                    </div>
+                </div>
             </div>
             <div class="date-picker">
                 <label for="payDate">Ngày trả</label>
@@ -80,5 +89,5 @@
     </div>
 </div>
 </body>
-<script src=""></script>
+<script src="/js/combobox.js"></script>
 </html>
