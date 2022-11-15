@@ -17,19 +17,29 @@ class Combobox{
         })
     }
 
-    getData(){
+    async getData(){
         let me = this;
+        let url = me.combobox.attr("urls");
+        let response = await fetch(url, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8"
+            }
+        }).then((responses) => {return responses.json()}).then((results) => {return results});
         let list = me.combobox.find('#list');
         list.empty();
-        for(let i = 0; i < 3; i++) {
-            let item = $(`<div class="item">item ${i}</div>`);
+        response.map((reader) => {
+            let item = $(`<div class="item">${reader.fullName}-${reader.code}</div>`);
             item.click(() => {
-                me.combobox.find('input').val(`item ${i}`);
+                let input = me.combobox.find('input');
+                input.val(`${reader.fullName}-${reader.code}`);
+                input.attr("readerID", reader.id);
                 me.combobox.find('#list').toggle();
+                $('#readerCode').find('span').text(reader.code)
+                $('#readerName').find('span').text(reader.fullName)
             })
             list.append(item)
-        }
-
+        })
     }
 }
 

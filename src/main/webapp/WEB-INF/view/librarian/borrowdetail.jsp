@@ -45,7 +45,7 @@
         </div>
         <div class="command">
             <span>Các sách mượn</span>
-                <a href="add-books" class="btn-page">Thêm sách</a>
+                <a href="/change-books?callCardId=${detail.id}" class="btn-page">Thêm sách</a>
         </div>
         <table class="grid">
             <thead>

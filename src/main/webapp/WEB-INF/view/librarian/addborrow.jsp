@@ -23,14 +23,11 @@
     <div class="main flex">
         <div class="row flex">
             <div>
-                <div class="info-item">Mã độc giả: <span></span></div>
-                <div class="info-item">Họ tên: <span></span></div>
-                <div class="combobox" id="combobox">
+                <div class="info-item" id="readerCode">Mã độc giả: <span></span></div>
+                <div class="info-item" id="readerName">Họ tên: <span></span></div>
+                <div class="combobox" id="combobox" urls="http://localhost:8080/api/readers">
                     <input type="text" id="comboboxValue">
                     <div class="list-values" id="list">
-                        <div class="item">item 1</div>
-                        <div class="item">item 1</div>
-                        <div class="item">item 1</div>
                     </div>
                 </div>
             </div>
@@ -48,7 +45,7 @@
         <div class="command">
             <span>Các sách mượn</span>
             <c:if test="${detail == null}">
-                <a href="add-books" class="btn-page">Thêm sách</a>
+                <a href="/add-books" class="btn-page">Thêm sách</a>
             </c:if>
         </div>
         <table class="grid">
@@ -90,4 +87,5 @@
 </div>
 </body>
 <script src="/js/combobox.js"></script>
+<script src="/js/librarian/addborrow.js"></script>
 </html>

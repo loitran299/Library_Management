@@ -27,8 +27,6 @@ public class CallCardServiceImpl implements CallCardService {
         Date utilDate = new Date();
         java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
         entity.setBorrowedDate(sqlDate);
-        Reader reader = readerRepository.getById(MySession.getUserID());
-        entity.setReader(reader);
         return callCardRepository.save(entity);
     }
 

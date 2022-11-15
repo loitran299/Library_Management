@@ -7,6 +7,8 @@ import com.loitv.libraryManagement.service.ReaderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ReaderServiceImpl implements ReaderService{
     @Autowired
@@ -43,5 +45,10 @@ public class ReaderServiceImpl implements ReaderService{
     @Override
     public Reader getById(Long id) {
         return readerRepository.getById(id);
+    }
+
+    @Override
+    public List<Reader> getAll() {
+        return readerRepository.findAll();
     }
 }

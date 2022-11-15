@@ -57,7 +57,7 @@
                 </tbody>
             </table>
             <div class="bottom">
-                <a href="add-borrow" class="btn-page" id="backToBorrow">Quay lại</a>
+                <button onclick="history.go(-1)" class="btn-page">Quay lại</button>
                 <a href="" class="btn-page">Lưu</a>
             </div>
         </div>

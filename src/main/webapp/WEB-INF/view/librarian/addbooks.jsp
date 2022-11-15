@@ -22,6 +22,9 @@
     <div class="main flex">
         <div class="command">
             <span>Chọn sách</span>
+            <c:if test="${callCardID != null}">
+                <input type="hidden" id="idCallCard" value="${callCardID}">
+            </c:if>
             <input type="text" placeholder="search..." class="input-search" id="input-search">
         </div>
         <table class="grid">
@@ -57,8 +60,8 @@
                 </tbody>
             </table>
             <div class="bottom">
-                <a href="add-borrow" class="btn-page" id="backToBorrow">Quay lại</a>
-                <a href="" class="btn-page">Lưu</a>
+                <button onclick="history.back()" class="btn-page">Quay lại</button>
+                <button class="btn-page" id="btnSave">Lưu</button>
             </div>
         </div>
     </div>

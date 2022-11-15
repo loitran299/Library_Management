@@ -7,7 +7,6 @@ window.addEventListener( "pageshow", function ( event ) {
         window.location.reload();
     }
 });
-
 let selected = {};
 function init() {
     let results = localStorage.getItem("booksSelected");
@@ -15,6 +14,7 @@ function init() {
         selected = JSON.parse(results);
         renderBooksInBorrow(selected);
     }
+
 
     initEvents();
 }
@@ -46,7 +46,9 @@ function renderBooksInBorrow(books) {
 }
 
 async function addBorrow() {
-    let url = "http://localhost:8080/api/call-card";
+    let id = $("#combobox").find("input").attr("readerID");
+    console.log(id);
+    let url = `http://localhost:8080/api/call-card/${id}`;
     let data = selected.map((item) => {
         return item.id;
     });
@@ -65,7 +67,7 @@ async function addBorrow() {
     console.log(response)
     if (response.status == 200) {
         alert(response.message);
-        window.location.href = "http://localhost:8080/borrow-books";
+        window.location.href = "http://localhost:8080/book-management";
     }else {
         alert(response.message);
     }

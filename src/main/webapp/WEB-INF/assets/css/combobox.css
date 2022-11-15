@@ -28,6 +28,8 @@
     width: 100%;
     margin-top: 5px;
     background-color: #FFFFFF;
+    max-height: 100px;
+    overflow-y: scroll;
 }
 
 .list-values div {
