@@ -82,7 +82,16 @@ public class CallCardServiceImpl implements CallCardService {
 
     @Override
     public boolean confirmCallCard(long id) {
-        return false;
+        boolean checked = false;
+        try {
+            CallCard callCard = callCardRepository.getById(id);
+            callCard.setStatus("Đã lấy");
+            callCardRepository.save(callCard);
+            checked = true;
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+        return checked;
     }
 
     @Override

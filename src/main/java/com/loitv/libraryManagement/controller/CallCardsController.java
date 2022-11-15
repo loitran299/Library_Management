@@ -109,6 +109,21 @@ public class CallCardsController {
         return response;
     }
 
+    @PutMapping("/receive/{id}")
+    public Responses changeStatus(@PathVariable Long id) {
+        Responses response = new Responses();
+        try {
+            callCardService.confirmCallCard(id);
+            response.setStatus(200);
+            response.setMessage("Xác nhận thành công");
+        }catch (Exception e) {
+            response.setStatus(400);
+            response.setMessage("Xác nhận không thành công");
+            e.printStackTrace();
+        }
+        return response;
+    }
+
     @GetMapping("/find")
     public List<CallCard> findByReader(@RequestParam String information) {
         return callCardService.getByWaitingStatus(information);
