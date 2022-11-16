@@ -20,7 +20,7 @@
         <div class="content">
             <div class="register">
                 <h3>Đăng ký</h3>
-                    <form action="/register" method="post" id="formRegister">
+                    <div class="form" id="formRegister">
                         <div class="form-row">
                             <label for="username">Tên đăng nhập</label>
                             <input type="text" name="username" id="username" required>
@@ -45,8 +45,8 @@
                             <label for="phoneNumber">Số điện thoại</label>
                             <input type="text" name="phoneNumber" id="phoneNumber" required>
                         </div>
-                        <input type="submit" class="btn-submit btn-blue" id="btnRegister" value="Đăng ký">
-                    </form>
+                        <button class="btn-submit btn-blue" id="btnRegister">Đăng ký</button>
+                    </div>
                     <div class="form-bottom">
                         <a href="/login">Đăng nhập</a>
                     </div>
@@ -55,4 +55,5 @@
     </div>
 </div>
 </body>
+<script src="/js/register.js"></script>
 </html>

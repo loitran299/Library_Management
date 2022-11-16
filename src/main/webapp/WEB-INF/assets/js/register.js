@@ -1,5 +1,4 @@
 $("#btnRegister").click(async () => {
-    debugger
     const formData = {
         'username': $("#username").val(),
         'password': $("#password").val(),
@@ -14,13 +13,12 @@ $("#btnRegister").click(async () => {
         headers: {
             "Content-Type": "application/json; charset=UTF-8"
         }
-    });
-    let responses = response.json();
-    console.log(responses)
-    if(responses.status == 200) {
-        alert(responses.message);
-        $.location.href = "http://localhost:8080/home-readers"
+    }).then((responses) => {return responses.json()}).then((results) => {return results});
+    console.log(response)
+    if(response.status == 200) {
+        alert(response.message);
+        window.location.href = "http://localhost:8080/login"
     }else {
-        alert(responses.message);
+        alert(response.message);
     }
 })

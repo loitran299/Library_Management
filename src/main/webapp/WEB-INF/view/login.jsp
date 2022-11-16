@@ -18,7 +18,7 @@
         <div class="content">
             <div class="register">
                 <h3>Đăng Nhập</h3>
-                <form action="/login" method="post">
+                <form class="form" action="/login" method="post">
                     <div class="form-row">
                         <label for="username">Tên đăng nhập</label>
                         <input type="text" name="username" id="username">
