@@ -41,8 +41,8 @@ function renderGrid(callCard) {
         tr.append($(`<td></td>`).append(btn));
         let btn2 = $(`<button class="btn-page" onclick="confirmCallCard(${item.id})">Xác nhận lấy</button>`)
         tr.append($(`<td></td>`).append(btn2));
-
-
+        let btn3 = $(`<a href="http://localhost:8080/book-note?id=${item.id}" class="btn-page">Ghi chú</a>`)
+        tr.append($(`<td></td>`).append(btn3));
         $("#tbd").append(tr);
     })
 }

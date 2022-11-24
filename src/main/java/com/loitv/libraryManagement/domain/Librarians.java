@@ -67,4 +67,11 @@ public class Librarians {
         model.addAttribute("callCardID",callCardId);
         return "librarian/addbooks";
     }
+
+    @GetMapping("book-note")
+    public String addBookNote(@RequestParam Long id, Model model){
+        CallCard callCard = callCardService.getById(id);
+        model.addAttribute("detail", callCard);
+        return "librarian/callcardnotes";
+    }
 }

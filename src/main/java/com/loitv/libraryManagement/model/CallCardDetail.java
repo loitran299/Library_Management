@@ -18,6 +18,8 @@ public class CallCardDetail {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    private String notes;
+
     @ManyToOne
     private CallCard callCard;
 

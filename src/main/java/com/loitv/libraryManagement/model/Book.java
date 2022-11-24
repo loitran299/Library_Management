@@ -41,6 +41,7 @@ public class Book {
     @JsonManagedReference
     private Title title;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "book")
     private Set<CallCardDetail> callCardDetails;
 }
