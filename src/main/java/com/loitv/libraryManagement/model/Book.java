@@ -40,4 +40,7 @@ public class Book {
     @JoinColumn(name = "title_id")
     @JsonManagedReference
     private Title title;
+
+    @OneToMany(mappedBy = "book")
+    private Set<CallCardDetail> callCardDetails;
 }

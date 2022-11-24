@@ -45,4 +45,7 @@ public class CallCard {
             joinColumns = @JoinColumn(name = "callCard_id"),
             inverseJoinColumns = @JoinColumn(name = "book_id"))
     private Set<Book> books;
+
+    @OneToMany(mappedBy = "callCard")
+    private Set<CallCardDetail> callCardDetails;
 }

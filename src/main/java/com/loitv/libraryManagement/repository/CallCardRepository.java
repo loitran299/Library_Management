@@ -9,4 +9,5 @@ import java.util.List;
 public interface CallCardRepository extends JpaRepository<CallCard, Long> {
     List<CallCard> findByReaderAndStatus(Reader reader,String status);
     List<CallCard> findByReader_Id(Long readerId);
+    List<CallCard> findByStatus(String status);
 }

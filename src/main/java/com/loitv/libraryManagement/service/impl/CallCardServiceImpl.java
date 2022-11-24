@@ -6,7 +6,7 @@ import com.loitv.libraryManagement.model.Reader;
 import com.loitv.libraryManagement.repository.CallCardRepository;
 import com.loitv.libraryManagement.repository.ReaderRepository;
 import com.loitv.libraryManagement.service.CallCardService;
-import com.loitv.libraryManagement.service.MySession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -62,6 +62,7 @@ public class CallCardServiceImpl implements CallCardService {
 
     @Override
     public List<CallCard> getByWaitingStatus(String information) {
+        if(information.equals("")) return callCardRepository.findByStatus("Chờ lấy");
         List<Reader> readers = readerRepository.findAll();
         Reader reader = new Reader();
         information = information.toLowerCase(Locale.ROOT);

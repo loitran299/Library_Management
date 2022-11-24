@@ -2,6 +2,7 @@ package com.loitv.libraryManagement.service.impl;
 
 import com.loitv.libraryManagement.model.Librarian;
 import com.loitv.libraryManagement.model.Reader;
+import com.loitv.libraryManagement.repository.MemberRepository;
 import com.loitv.libraryManagement.repository.ReaderRepository;
 import com.loitv.libraryManagement.service.ReaderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import java.util.List;
 public class ReaderServiceImpl implements ReaderService{
     @Autowired
     private ReaderRepository readerRepository;
+
 
     @Override
     public Reader add(Reader entity) {
